@@ -1,0 +1,16 @@
+#+title: $12M_{\odot}$ from pre-MS to onset of core-collapse
+#+author: Mathieu Renzo w/ Claude:Opus 5
+
+Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=,
+
+- MESA version: =r15140-3100-g9f9a2afc8=
+- MESASDK: =x86_64-linux-26.6.1=
+
+
+#+BEGIN_SRC bash
+  gfotran --version
+  GNU Fortran (GCC) 15.2.0
+  Copyright (C) 2025 Free Software Foundation, Inc.
+  This is free software; see the source for copying conditions.  There is NO
+  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+END_SRC

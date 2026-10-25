@@ -1,0 +1,11 @@
+*/LOGS/*
+*/photos/*
+*/png/*
+*/build/*
+
+*.data
+*.dat
+*.o
+*.a
+*.mod
+*.smod
