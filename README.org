@@ -6,6 +6,8 @@ Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=,
 - MESA version: =r15140-3100-g9f9a2afc8=
 - MESASDK: =x86_64-linux-26.6.1=
 
+Compile and run: =make && ./rn=, then use the =images_to_movie= script shipped with the SDK.
+
 
 #+BEGIN_SRC bash
   gfotran --version

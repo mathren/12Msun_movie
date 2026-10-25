@@ -4,84 +4,84 @@
 
 &star_job
 ! --- part 1: build pre-MS model
-create_pre_main_sequence_model = .true.
-pre_ms_relax_to_start_radiative_core = .true.
+create_pre_main_sequence_model            = .true.
+pre_ms_relax_to_start_radiative_core      = .true.
 
 ! --- parts 2-3: rotation flag on, relax to omega/omega_crit near ZAMS
-new_rotation_flag = .true.
-change_rotation_flag = .false.
-near_zams_relax_omega_div_omega_crit = .true.
-num_steps_to_relax_rotation = 50
+new_rotation_flag                         = .true.
+change_rotation_flag                      = .false.
+near_zams_relax_omega_div_omega_crit      = .true.
+num_steps_to_relax_rotation               = 50
 
 ! --- final
-save_model_when_terminate = .true.
-save_model_filename = 'final.mod'
-required_termination_code_string = 'fe_core_infall_limit'
+save_model_when_terminate                 = .true.
+save_model_filename                       = 'final.mod'
+required_termination_code_string          = 'fe_core_infall_limit'
 
 ! --- inlist_mass_Z_wind_rotation
-new_Z = 1.42d-2
-new_omega_div_omega_crit = 0.2d0
-initial_zfracs = 6 ! set to asplund 2009 abundance fractions
+new_Z                                     = 1.42d-2
+new_omega_div_omega_crit                  = 0.2d0
+initial_zfracs                            = 6 ! set to asplund 2009 abundance fractions
 ! --- inlist_common
-show_log_description_at_start = .false.
-change_net = .true.
-new_net_name = 'approx21_cr60_plus_co56.net'
-dump_missing_metals_into_heaviest = .false.
-change_D_omega_flag = .true.
-new_D_omega_flag = .true.
-change_v_flag = .true.
-new_v_flag = .true.
-num_special_rate_factors = 2
-reaction_for_special_factor(1) = 'r_c12_ag_o16'
-special_rate_factor(1) = 1
-filename_of_special_rate(1) = 'c12ag_deboer_sigma_0p0_2000_Tgrid.dat'
-reaction_for_special_factor(2) = 'r_he4_he4_he4_to_c12'
-special_rate_factor(2) = 1
-filename_of_special_rate(2) = 'r_he4_he4_he4_to_c12_cf88.txt'
-show_retry_counts_when_terminate = .true.
+show_log_description_at_start             = .false.
+change_net                                = .true.
+new_net_name                              = 'approx21_cr60_plus_co56.net'
+dump_missing_metals_into_heaviest         = .false.
+change_D_omega_flag                       = .true.
+new_D_omega_flag                          = .true.
+change_v_flag                             = .true.
+new_v_flag                                = .true.
+num_special_rate_factors                  = 2
+reaction_for_special_factor(1)            = 'r_c12_ag_o16'
+special_rate_factor(1)                    = 1
+filename_of_special_rate(1)               = 'c12ag_deboer_sigma_0p0_2000_Tgrid.dat'
+reaction_for_special_factor(2)            = 'r_he4_he4_he4_to_c12'
+special_rate_factor(2)                    = 1
+filename_of_special_rate(2)               = 'r_he4_he4_he4_to_c12_cf88.txt'
+show_retry_counts_when_terminate          = .true.
 show_timestep_limit_counts_when_terminate = .true.
-pgstar_flag = .true.
-save_pgstar_files_when_terminate = .true.
+pgstar_flag                               = .true.
+save_pgstar_files_when_terminate          = .true.
 / ! end of star_job namelist
 
 &eos
-use_Skye = .true.
-use_PC = .false.
+use_Skye                                  = .true.
+use_PC                                    = .false.
 / ! end of eos namelist
 
 &kap
-Zbase = 1.42d-2
-kap_file_prefix = 'a09'    ! 'gs98' 'a09'  'OP_a09' 'OP_gs98'
-kap_CO_prefix   = 'a09_co' ! 'gs98_co' 'a09_co'
-kap_lowT_prefix = 'lowT_fa05_a09p'
-use_Type2_opacities = .true.
+Zbase                                     = 1.42d-2
+kap_file_prefix                           = 'a09'    ! 'gs98' 'a09'  'OP_a09' 'OP_gs98'
+kap_CO_prefix                             = 'a09_co' ! 'gs98_co' 'a09_co'
+kap_lowT_prefix                           = 'lowT_fa05_a09p'
+use_Type2_opacities                       = .true.
 / ! end of kap namelist
 
 &controls
 ! --- inlist_mass_Z_wind_rotation
-initial_mass = 12
-initial_z = 1.42d-2 ! solar
-initial_y = 0.2703d0 ! from asplund et al. 2009, solar.
-Dutch_scaling_factor = 0d0
+initial_mass                              = 12
+initial_z                                 = 1.42d-2 ! solar
+initial_y                                 = 0.2703d0 ! from asplund et al. 2009, solar.
+Dutch_scaling_factor                      = 0.3d0
 ! --- inlist_common
-cool_wind_full_on_T = 0.8d4
-hot_wind_full_on_T = 1.2d4
-cool_wind_RGB_scheme = 'Dutch'
-cool_wind_AGB_scheme = 'Dutch'
-hot_wind_scheme = 'Dutch'
-Dutch_wind_lowT_scheme = 'de Jager'
-max_T_center_for_any_mass_loss = 1.1d9
-Pextra_factor = 2 ! easy to lower with mass loss!ideally 1.5 is most physical
-atm_option = 'T_tau'
-atm_T_tau_relation = 'Eddington'
-atm_T_tau_opacity = 'fixed' ! next best is 'iterated'
-am_nu_visc_factor = 0
-am_D_mix_factor = 0.0333333333333333d00
-D_DSI_factor = 0
-D_SH_factor = 1
-D_SSI_factor = 1
-D_ES_factor = 1
-D_GSF_factor = 1
+cool_wind_full_on_T                       = 0.8d4
+hot_wind_full_on_T                        = 1.2d4
+cool_wind_RGB_scheme                      = 'Dutch'
+cool_wind_AGB_scheme                      = 'Dutch'
+hot_wind_scheme                           = 'Dutch'
+Dutch_wind_lowT_scheme                    = 'de Jager'
+max_T_center_for_any_mass_loss            = 1.1d9
+Pextra_factor                             = 2 ! easy to lower with mass loss!ideally 1.5 is most physical
+atm_option                                = 'T_tau'
+atm_T_tau_relation                        = 'Eddington'
+atm_T_tau_opacity                         = 'fixed' ! next best is 'iterated'
+am_nu_visc_factor                         = 0
+am_D_mix_factor                           = 0.0333333333333333d00
+D_DSI_factor                              = 0
+D_SH_factor                               = 1
+D_SSI_factor                              = 1
+D_ES_factor                               = 1
+D_GSF_factor                              = 1
 D_ST_factor = 1
 mixing_length_alpha = 1.5
 MLT_option = 'TDC'
