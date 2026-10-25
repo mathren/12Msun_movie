@@ -14,7 +14,7 @@ Profile_Panels3_file_flag               = .false.
 Profile_Panels4_file_flag               = .false.
 Profile_Panels5_file_flag               = .true.
 ! interval for files
-Grid2_file_interval                     = 100 ! output when mod(model_number,Grid2_file_interval)==0
+Grid2_file_interval                     = 10 ! output when mod(model_number,Grid2_file_interval)==0
 Profile_Panels1_file_interval           = 100
 Profile_Panels3_file_interval           = 100
 Profile_Panels5_file_interval           = 100
