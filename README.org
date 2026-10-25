@@ -1,7 +1,15 @@
 #+title: $12M_{\odot}$ from pre-MS to onset of core-collapse
 #+author: Mathieu Renzo w/ Claude:Opus 5
 
-Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=,
+
+#+CAPTION: Snapshot
+#+DOWNLOADED: screenshot @ 2026-10-24 19:01:22
+[[file:images/example.png]]
+
+
+** Technical info
+
+Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=.
 
 - MESA version: =r15140-3100-g9f9a2afc8=
 - MESASDK: =x86_64-linux-26.6.1=
