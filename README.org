@@ -3,14 +3,18 @@
 
 Setup to create [[./demo_12Msun.mp4][demo video of a 12M_{\odot} mildly-rotating star]].
 
-#+CAPTION: Snapshot of the video. Note that pgstar is highly configurable.
-#+DOWNLOADED: screenshot @ 2026-10-24 19:01:22
-[[file:images/example.png]]
+#+CAPTION: Animated gif of the entire evolution.
+[[./demo_12Msun.gif]]
 
+Rotation is initialized at zero age main sequence. Only then the
+corresponding panels appear in the plots. =pgstar= is highly
+configurable and many other parameters can be shown and/or calculated
+by =MESA=, see [[https://docs.mesastar.org/en/26.4.1/reference/pgstar.html][the docs]].
 
 ** Technical info
 
-Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=.
+Based on =$MESA_DIR/star/test_suite/12M_pre_ms_to_core_collapse=, adding
+initial rotation with $\omega=0.2\omega_{crit}$ at zero age main sequence.
 
 - MESA version: =r15140-3100-g9f9a2afc8= (not a release version)
 - MESASDK: =x86_64-linux-26.6.1=
